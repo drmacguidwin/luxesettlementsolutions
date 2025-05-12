@@ -7,223 +7,74 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-xh6nMrlJ8vRL+u0aNjW5DlfT8zC+SvT6ghNtbZtwEpQiU5D5TOf5E6nUZbVbUuQK/5Gq1+gP5I+4ZTT4O7yX3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    html {
-      scroll-behavior: auto;
-    }
-
-    html.smooth-scroll {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      color: #1b1b1b;
-      background-color: #ffffff;
-    }
-
-    .top-bar {
-      background-color: #d8cf8c;
-      color: #1b1b1b;
-      text-align: center;
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      border-bottom: 1px solid #d8cf8c;
-    }
-
-    header {
-      background-color: #ffffff;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #ddd;
-      position: fixed;
-      top: 2.5rem;
-      width: 100%;
-      z-index: 999;
-    }
-
-    .logo img {
-      height: 50px;
-    }
-
-    .hero {
-      background: url('A_high-resolution_digital_photograph_captures_a_pa.png') no-repeat center center;
-      background-size: cover;
-      color: white;
-      text-align: center;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 1rem;
-      margin-top: 7.5rem;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-
-    .hero p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-    }
-
-    .hero .cta {
-      background-color: #344b9b;
-      color: white;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 3rem 1rem;
-    }
-
-    section h2,
-    section > p:first-of-type {
-      text-align: center;
-    }
-
-    .stats {
-      display: flex;
-      justify-content: space-around;
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    .stats div {
-      max-width: 200px;
-    }
-
-    .stats i {
-      font-size: 2rem;
-      color: #344b9b;
-      margin-bottom: 0.5rem;
-    }
-
-    .who-we-are {
-      background-color: #344b9b;
-      color: white;
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-
-    .process {
-      text-align: center;
-    }
-
-    .process-steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .step {
-      padding-bottom: 1rem;
-      border-bottom: 2px solid #1b1b1b;
-    }
-
-    .get-started {
-      background-color: #f0f0f0;
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-
-    footer {
-      background-color: #1b2d6e;
-      color: white;
-      text-align: center;
-      padding: 3rem 1rem 1rem;
-      margin-top: 2rem;
-    }
-
-    footer a {
-      color: #ffffff;
-    }
-
-    .footer-disclaimer {
-      margin-top: 2rem;
-      font-size: 0.85rem;
-      color: #ddd;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    html { scroll-behavior: auto; }
+    html.smooth-scroll { scroll-behavior: smooth; }
+    body { margin: 0; font-family: 'Open Sans', sans-serif; color: #1b1b1b; background-color: #ffffff; }
+    .top-bar { background-color: #d8cf8c; color: #1b1b1b; text-align: center; padding: 0.5rem 1rem; font-size: 0.9rem; position: fixed; top: 0; width: 100%; z-index: 1000; border-bottom: 1px solid #d8cf8c; }
+    header { background-color: #ffffff; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ddd; position: fixed; top: 2.5rem; width: 100%; z-index: 999; }
+    .logo img { height: 50px; }
+    .hero { background: url('A_high-resolution_digital_photograph_captures_a_pa.png') no-repeat center center; background-size: cover; color: white; text-align: center; height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 1rem; margin-top: 7.5rem; }
+    .hero h1 { font-size: 3rem; margin: 0; }
+    .hero p { font-size: 1.25rem; margin-bottom: 2rem; }
+    .hero .cta { background-color: #344b9b; color: white; border: none; padding: 1rem 2rem; font-size: 1rem; cursor: pointer; border-radius: 4px; }
+    section { max-width: 1000px; margin: 0 auto; padding: 3rem 1rem; }
+    section h2, section > p:first-of-type { text-align: center; }
+    .stats { display: flex; justify-content: space-around; text-align: center; margin-top: 2rem; }
+    .stats div { max-width: 200px; }
+    .stats i { font-size: 2rem; color: #344b9b; margin-bottom: 0.5rem; }
+    .who-we-are { background-color: #344b9b; color: white; padding: 3rem 1rem; text-align: center; }
+    .process { text-align: center; }
+    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem; }
+    .step { padding-bottom: 1rem; border-bottom: 2px solid #1b1b1b; }
+    .get-started { background-color: #f0f0f0; text-align: center; padding: 3rem 1rem; }
+    footer { background-color: #1b2d6e; color: white; text-align: center; padding: 3rem 1rem 1rem; margin-top: 2rem; }
+    footer a { color: #ffffff; }
+    .footer-disclaimer { margin-top: 2rem; font-size: 0.85rem; color: #ddd; max-width: 900px; margin-left: auto; margin-right: auto; }
   </style>
   <script>
-    // Smooth scroll workaround for slower animation
     document.addEventListener("DOMContentLoaded", () => {
       document.documentElement.classList.add("smooth-scroll");
-
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
           const target = document.querySelector(this.getAttribute('href'));
-          const offsetTop = target.offsetTop - 100; // adjust for sticky header
-
-          window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-          });
+          const offsetTop = target.offsetTop - 100;
+          window.scrollTo({ top: offsetTop, behavior: 'smooth' });
         });
       });
     });
   </script>
 </head>
 <body>
-  <div class="top-bar">
-    The final date to register your business was February 4th, 2025
-  </div>
-
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="Luxe Settlement Solutions Logo">
-    </div>
-  </header>
-
+  <div class="top-bar">The final date to register your business was February 4th, 2025</div>
+  <header><div class="logo"><img src="logo.png" alt="Luxe Settlement Solutions Logo"></div></header>
   <div class="hero">
     <h1>Luxe Settlement Solutions</h1>
     <p>Payouts Made Painless.</p>
     <a href="#get-started"><button class="cta">Get Started</button></a>
   </div>
-
   <section>
     <h2>Payment Card Interchange Fee Settlement</h2>
     <p>If your business accepted VISA or Mastercard during the below Class Period, then you're likely eligible to claim a share of the $5.5 billion Settlement.</p>
     <div class="stats">
       <div>
-        <i class="fas fa-dollar-sign"></i>
+        <div style="font-size: 2rem; font-weight: bold; color: #344b9b; margin-bottom: 0.5rem;">$</div>
         <p><strong>$5.5B</strong><br>Settlement Amount</p>
       </div>
       <div>
-        <i class="fas fa-calendar-alt"></i>
+        <img src="calendar-2.svg" alt="Calendar Icon" style="height: 48px; margin-bottom: 0.5rem;">
         <p><strong>Jan 1, 2004 – Jan 25, 2019</strong><br>Class Period</p>
       </div>
       <div>
-        <i class="fas fa-pen"></i>
+        <img src="pen-2.svg" alt="Pen Icon" style="height: 48px; margin-bottom: 0.5rem;">
         <p><strong>February 4, 2025</strong><br>Final Date to Register</p>
       </div>
     </div>
   </section>
-
   <div class="who-we-are">
     <h2>Who We Are</h2>
     <p>At Luxe Settlement Solutions, our mission is to simplify the claims process and maximize payouts for merchants who qualify for the Payment Card Interchange Fee Settlement. We do this by providing expert guidance and seamless filing, all while maintaining the highest quality professionalism and customer service.</p>
   </div>
-
   <section class="process">
     <h2>What Is The Process</h2>
     <div class="process-steps">
@@ -245,14 +96,12 @@
       </div>
     </div>
   </section>
-
   <section id="get-started" class="get-started">
     <h2>Get Started</h2>
     <p>The final day to register businesses was <strong>February 4th, 2025</strong>. If you registered your business with us, we are continuing to work on maximizing your payout, and will provide updates on timelines when they become available.</p>
     <p>If you have any questions for our team, please reach out to the email below.</p>
     <p>You can also go directly to the Payment Card Settlement website for more information or no-cost assistance: <a href="https://www.paymentcardsettlement.com">www.paymentcardsettlement.com</a></p>
   </section>
-
   <footer>
     <h2>Contact Us</h2>
     <p><a href="mailto:dave@luxesettlementsolutions.com">dave@luxesettlementsolutions.com</a></p>
