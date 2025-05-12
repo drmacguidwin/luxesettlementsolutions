@@ -1,70 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luxe Settlement Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-      color: #333;
+      font-family: 'Open Sans', sans-serif;
+      color: #1b1b1b;
+      background-color: #ffffff;
     }
+
     header {
-      background-color: #1b1b1b;
-      color: white;
-      padding: 2rem;
-      text-align: center;
+      background-color: #ffffff;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
     }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .hero {
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Snowy_Mountains.jpg/1600px-Snowy_Mountains.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero .cta {
+      background-color: #344b9b;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
     section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
     }
-    .step {
-      margin-bottom: 1.5rem;
-    }
-    footer {
-      background-color: #222;
-      color: white;
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
       text-align: center;
-      padding: 1rem;
       margin-top: 2rem;
+    }
+
+    .stats div {
+      max-width: 200px;
+    }
+
+    .who-we-are {
+      background-color: #344b9b;
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .process {
+      text-align: center;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .step {
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #1b1b1b;
+    }
+
+    .get-started {
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 2rem 1rem;
+      border-top: 1px solid #ccc;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Luxe Settlement Solutions</h1>
-    <p>Helping businesses claim what they’re owed from the Payment Card Settlement</p>
+    <div class="logo">
+      <img src="Luxe%20Settlement%20Group%20cropped.png" alt="Luxe Settlement Solutions Logo">
+    </div>
   </header>
 
+  <div class="hero">
+    <h1>Luxe Settlement Solutions</h1>
+    <p>Payouts Made Painless.</p>
+    <button class="cta">Get Started</button>
+  </div>
+
   <section>
-    <h2>What is this about?</h2>
-    <p>If your business accepted Visa or Mastercard between 2004 and 2019, you may be entitled to part of a multi-billion dollar class action settlement related to interchange fees.</p>
-
-    <h2>Who is eligible?</h2>
-    <p>Most businesses that accepted credit card payments from 2004 to 2019 are eligible. You do not need to still be in business to claim.</p>
-
-    <h2>How we help</h2>
-    <div class="step">
-      <strong>1. Sign up:</strong> We’ll verify your eligibility with minimal effort on your part.
+    <h2>Payment Card Interchange Fee Settlement</h2>
+    <p>If your business accepted VISA or Mastercard during the below Class Period, then you're likely eligible to claim a share of the $5.5 billion Settlement.</p>
+    <div class="stats">
+      <div>
+        <p><strong>$5.5B</strong><br>Settlement Amount</p>
+      </div>
+      <div>
+        <p><strong>Jan 1, 2004 – Jan 25, 2019</strong><br>Class Period</p>
+      </div>
+      <div>
+        <p><strong>February 4, 2025</strong><br>Final Date to Register</p>
+      </div>
     </div>
-    <div class="step">
-      <strong>2. We handle the paperwork:</strong> Our team manages the filing so you don’t have to.
-    </div>
-    <div class="step">
-      <strong>3. Get paid:</strong> When the claims are processed, you’ll receive your share directly.
-    </div>
+  </section>
 
-    <h2>Contact us</h2>
-    <p>Email: <a href="mailto:info@luxesettlementsolutions.com">info@luxesettlementsolutions.com</a></p>
+  <div class="who-we-are">
+    <h2>Who We Are</h2>
+    <p>At Luxe Settlement Solutions, our mission is to simplify the claims process and maximize payouts for merchants who qualify for the Payment Card Interchange Fee Settlement. We do this by providing expert guidance and seamless filing, all while maintaining the highest quality professionalism and customer service.</p>
+  </div>
+
+  <section class="process">
+    <h2>What Is The Process</h2>
+    <div class="process-steps">
+      <div class="step">
+        <h3>01. Register</h3>
+        <p>Provide information about your business below, and from there we will register and verify its eligibility with the Class Administrator.</p>
+      </div>
+      <div class="step">
+        <h3>02. Advocate</h3>
+        <p>Once registered, we audit, contest and advocate for you to ensure the Class Administrator has accounted for the proper amount of interchange fees you've paid during the term.</p>
+      </div>
+      <div class="step">
+        <h3>03. File</h3>
+        <p>Once we're satisfied the Class Administrator has accounted for all the fees you've paid, we file the Settlement Claim(s) on your behalf for zero up front costs.</p>
+      </div>
+      <div class="step">
+        <h3>04. Pay You</h3>
+        <p>After the Registration date has passed and amounts are approved, we remit the payout to you, minus the LSS fee. We only get paid when you get paid.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="get-started">
+    <h2>Get Started</h2>
+    <p>The final day to register businesses was <strong>February 4th, 2025</strong>. If you registered your business with us, we are continuing to work on maximizing your payout, and will provide updates on timelines when they become available.</p>
+    <p>If you have any questions for our team, please reach out to the email below.</p>
+    <p>You can also go directly to the Payment Card Settlement website for more information or no-cost assistance: <a href="https://www.paymentcardsettlement.com">www.paymentcardsettlement.com</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Luxe Settlement Solutions</p>
+    <h2>Contact Us</h2>
+    <p><a href="mailto:dave@luxesettlementsolutions.com">dave@luxesettlementsolutions.com</a></p>
   </footer>
 </body>
 </html>
