@@ -30,7 +30,18 @@
     footer { background-color: #1b2d6e; color: white; text-align: center; padding: 3rem 1rem 1rem; margin-top: 2rem; }
     footer a { color: #ffffff; }
     .footer-disclaimer { margin-top: 2rem; font-size: 0.85rem; color: #ddd; max-width: 900px; margin-left: auto; margin-right: auto; }
-  </style>
+    .menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .menu a {
+    text-decoration: none;
+    color: #1b1b1b;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+</style>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       document.documentElement.classList.add("smooth-scroll");
@@ -45,14 +56,26 @@
     });
   </script>
 </head>
-<body>
-    <header><div class="logo"><img src="logo.png" alt="Luxe Settlement Solutions Logo"></div></header>
+<body id="top">
+    <header>
+  <div class="logo">
+    <img src="logo.png" alt="Luxe Settlement Solutions Logo">
+  </div>
+  <nav class="menu">
+    <a href="#top">Home</a>
+    <a href="#settlement-info">Settlement Info</a>
+    <a href="#about-us">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#get-started">Get Started</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
   <div class="hero">
     <h1>Luxe Settlement Solutions</h1>
     <p>Payouts Made Painless.</p>
     <a href="#get-started"><button class="cta">Get Started</button></a>
   </div>
-  <section>
+  <section id="settlement-info">
     <h2>Payment Card Interchange Fee Settlement</h2>
     <p>If your business accepted VISA or Mastercard during the below Class Period, then you're likely eligible to claim a share of the $5.5 billion Settlement.</p>
     <div class="stats">
@@ -70,11 +93,11 @@
       </div>
     </div>
   </section>
-  <div class="who-we-are">
+  <div class="who-we-are" id="about-us">
     <h2>Who We Are</h2>
     <p>At Luxe Settlement Solutions, our mission is to simplify the claims process and maximize payouts for merchants who qualify for the Payment Card Interchange Fee Settlement. We do this by providing expert guidance and seamless filing, all while maintaining the highest quality professionalism and customer service.</p>
   </div>
-  <section class="process">
+  <section class="process" id="services">
     <h2>What Is The Process</h2>
     <div class="process-steps">
       <div class="step">
@@ -101,7 +124,7 @@
     <p>If you have any questions for our team, please reach out to the email below.</p>
     <p>You can also go directly to the Payment Card Settlement website for more information or no-cost assistance: <a href="https://www.paymentcardsettlement.com">www.paymentcardsettlement.com</a></p>
   </section>
-  <footer>
+  <footer id="contact">
     <h2>Contact Us</h2>
     <p><a href="mailto:dave@luxesettlementsolutions.com">dave@luxesettlementsolutions.com</a></p>
     <div class="footer-disclaimer">
