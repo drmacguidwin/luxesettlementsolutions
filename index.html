@@ -11,6 +11,7 @@
       font-family: 'Open Sans', sans-serif;
       color: #1b1b1b;
       background-color: #ffffff;
+      scroll-behavior: smooth;
     }
 
     header {
@@ -27,7 +28,7 @@
     }
 
     .hero {
-      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Snowy_Mountains.jpg/1600px-Snowy_Mountains.jpg') no-repeat center center;
+      background: url('https://images.unsplash.com/photo-1601758003837-96b58c0ae0a0?auto=format&fit=crop&w=1650&q=80') no-repeat center center;
       background-size: cover;
       color: white;
       text-align: center;
@@ -101,10 +102,20 @@
     }
 
     footer {
+      background-color: #1b2d6e;
+      color: white;
       text-align: center;
-      background-color: #ffffff;
-      padding: 2rem 1rem;
-      border-top: 1px solid #ccc;
+      padding: 3rem 1rem 1rem;
+      margin-top: 2rem;
+    }
+
+    .footer-disclaimer {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #ddd;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
 </head>
@@ -118,7 +129,7 @@
   <div class="hero">
     <h1>Luxe Settlement Solutions</h1>
     <p>Payouts Made Painless.</p>
-    <button class="cta">Get Started</button>
+    <a href="#get-started"><button class="cta">Get Started</button></a>
   </div>
 
   <section>
@@ -164,7 +175,7 @@
     </div>
   </section>
 
-  <section class="get-started">
+  <section id="get-started" class="get-started">
     <h2>Get Started</h2>
     <p>The final day to register businesses was <strong>February 4th, 2025</strong>. If you registered your business with us, we are continuing to work on maximizing your payout, and will provide updates on timelines when they become available.</p>
     <p>If you have any questions for our team, please reach out to the email below.</p>
@@ -174,6 +185,10 @@
   <footer>
     <h2>Contact Us</h2>
     <p><a href="mailto:dave@luxesettlementsolutions.com">dave@luxesettlementsolutions.com</a></p>
+    <div class="footer-disclaimer">
+      Luxe Settlement Solutions services are designed to navigate your business through the settlement process. However, please be informed that you have the option to submit your claim independently through the Payment Card Settlement website without our assistance. Utilizing our services is entirely optional and not required for claim submission.
+    </div>
+    <p style="margin-top: 2rem; font-size: 0.8rem;">&copy; 2024 by Luxe Settlement Solutions, LLC</p>
   </footer>
 </body>
 </html>
