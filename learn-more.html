@@ -17,8 +17,7 @@
       padding: 1rem 2rem;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 3rem;
+      justify-content: space-between;
       flex-wrap: wrap;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       position: fixed;
@@ -29,29 +28,31 @@
     .logo img {
       height: 50px;
     }
-    section { max-width: 1000px; margin: 0 auto; padding: 3rem 1rem; }
-    section h2, section > p:first-of-type { text-align: center; }
-    .news-icons {
-      display: flex;
-      justify-content: center;
-      gap: 4rem;
-      margin-top: 1rem;
-      margin-bottom: 3rem;
-    }
-    .news-icons a img {
-      height: 60px;
-    }
     .menu {
       display: flex;
       align-items: center;
       gap: 2rem;
-      flex-wrap: wrap;
     }
     .menu a {
       text-decoration: none;
       color: #1b1b1b;
       font-weight: 600;
       font-size: 1rem;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .news-icons {
+      display: flex;
+      justify-content: center;
+      gap: 5rem;
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+    }
+    .news-icons a img {
+      height: 80px;
     }
     .faq-section {
       background-color: #f0f0f0;
@@ -76,12 +77,34 @@
       color: #344b9b;
       text-decoration: underline;
     }
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      .menu.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
   </style>
 </head>
 <body id="top">
   <header>
     <div class="logo">
       <img src="logo.png" alt="Luxe Settlement Solutions Logo">
+    </div>
+    <div class="menu-toggle" onclick="document.querySelector('.menu').classList.toggle('active')">
+      &#9776;
     </div>
     <nav class="menu">
       <a href="index.html#top">Home</a>
@@ -93,52 +116,62 @@
     </nav>
   </header>
 
-  <section style="margin-top: 8rem; text-align: center; background: linear-gradient(to bottom, #ffffff 0%, #e1e6f5 100%);">
-    <h2>What is the Settlement?</h2>
-    <div style="background-color: #4a5991; color: white; padding: 2rem; margin: 2rem auto; max-width: 800px; border-radius: 20px; box-shadow: 5px 5px 5px #999;">
-      <p>In 2005, U.S. Merchants brought a class-action lawsuit against VISA, Mastercard and their bank affiliates for allegedly inflating the interchange fees they charged Merchants for credit card processing. The lawsuit was settled in 2018, but the settlement amount and processes for its distribution were not determined until late 2023. Any Merchant or Business who accepted VISA and/or Mastercard from January 1, 2004 to January 25, 2019 is likely eligible to receive a portion of the settlement amount.</p>
-    </div>
-    <p style="margin-top: 3rem; font-weight: 600;">In The News:</p>
-    <div class="news-icons">
-      <a href="https://www.reuters.com/legal/visa-mastercard-56-bln-settlement-with-retailers-is-upheld-2023-03-15/" target="_blank">
-        <img src="reuters.png" alt="Reuters Logo">
-      </a>
-      <a href="https://apnews.com/article/small-business-credit-card-settlement-95e404b2572e75cea50b59e66b2ed971" target="_blank">
-        <img src="ap.png" alt="AP Logo">
-      </a>
-      <a href="https://www.latimes.com/business/la-fi-visa-mastercard-20180918-story.html" target="_blank">
-        <img src="latimes.png" alt="LA Times Logo">
-      </a>
-    </div>
-  </section>
+  <div style="background: linear-gradient(to bottom, #ffffff 0%, #e1e6f5 100%); width: 100%;">
+    <section style="margin-top: 8rem; text-align: center;">
+      <h2>What is the Settlement?</h2>
+      <div style="background-color: #4a5991; color: white; padding: 2rem; margin: 2rem auto; max-width: 800px; border-radius: 20px; box-shadow: 5px 5px 5px #999;">
+        <p>In 2005, U.S. Merchants brought a class-action lawsuit against VISA, Mastercard and their bank affiliates for allegedly inflating the interchange fees they charged Merchants for credit card processing. The lawsuit was settled in 2018, but the settlement amount and processes for its distribution were not determined until late 2023. Any Merchant or Business who accepted VISA and/or Mastercard from January 1, 2004 to January 25, 2019 is likely eligible to receive a portion of the settlement amount.</p>
+      </div>
+      <p style="margin-top: 3rem; font-weight: 600;">In The News:</p>
+      <div class="news-icons">
+        <a href="https://www.reuters.com/legal/visa-mastercard-56-bln-settlement-with-retailers-is-upheld-2023-03-15/" target="_blank">
+          <img src="reuters.png" alt="Reuters Logo">
+        </a>
+        <a href="https://apnews.com/article/small-business-credit-card-settlement-95e404b2572e75cea50b59e66b2ed971" target="_blank">
+          <img src="ap.png" alt="AP Logo">
+        </a>
+        <a href="https://www.latimes.com/business/la-fi-visa-mastercard-20180918-story.html" target="_blank">
+          <img src="latimes.png" alt="LA Times Logo">
+        </a>
+      </div>
+    </section>
+  </div>
 
-  <section class="faq-section">
-    <h2>FAQs</h2>
-    <div class="faq">
-      <h3>What was the class action lawsuit about?</h3>
-      <p>This class action lawsuit addresses the interchange fees charged to merchants who accepted Visa or Mastercard credit or debit cards between January 1, 2004, and January 25, 2019, and the rules enforced by Visa and Mastercard. The plaintiffs allege that Visa, Mastercard, and their member banks unlawfully set these fees and imposed rules that prevented merchants from steering customers to other payment methods, keeping the fees high.</p>
+  <div style="background-color: #f0f0f0; width: 100%;">
+    <section class="faq-section">
+      <h2>FAQs</h2>
+      <div class="faq">
+        <h3>What was the class action lawsuit about?</h3>
+        <p>This class action lawsuit addresses the interchange fees charged to merchants who accepted Visa or Mastercard credit or debit cards between January 1, 2004, and January 25, 2019, and the rules enforced by Visa and Mastercard. The plaintiffs allege that Visa, Mastercard, and their member banks unlawfully set these fees and imposed rules that prevented merchants from steering customers to other payment methods, keeping the fees high.</p>
 
-      <h3>What is an interchange fee?</h3>
-      <p>When a cardholder uses a credit or debit card for a purchase, an interchange fee of about 1% to 2% is incurred. These fees constitute the largest portion of the costs merchants pay for accepting Visa and Mastercard, which update their rates biannually and publish them online.</p>
+        <h3>What is an interchange fee?</h3>
+        <p>When a cardholder uses a credit or debit card for a purchase, an interchange fee of about 1% to 2% is incurred. These fees constitute the largest portion of the costs merchants pay for accepting Visa and Mastercard, which update their rates biannually and publish them online.</p>
 
-      <h3>How do I submit a claim?</h3>
-      <p>Select "Get Started" above and submit the intake form so we can register your claim. You can also file the claim yourself through the Payment Card Settlement <a href="https://www.paymentcardsettlement.com/en" target="_blank">website</a>.</p>
+        <h3>How do I submit a claim?</h3>
+        <p>Select "Get Started" above and submit the intake form so we can register your claim. You can also file the claim yourself through the Payment Card Settlement <a href="https://www.paymentcardsettlement.com/en" target="_blank">website</a>.</p>
 
-      <h3>How much will my business receive from the Settlement?</h3>
-      <p>The amount you receive from the settlement will depend on your actual or estimated Visa and Mastercard interchange fees from January 1, 2004, through January 25, 2019. The final amount will also consider the total claims filed, administrative costs, taxes, attorneys’ fees, and other expenses approved by the court. We at Luxe Settlement Solutions will advocate on your behalf and contest the Class Administrator's estimated interchange fees if we believe they are inaccurate.</p>
+        <h3>How much will my business receive from the Settlement?</h3>
+        <p>The amount you receive from the settlement will depend on your actual or estimated Visa and Mastercard interchange fees from January 1, 2004, through January 25, 2019. The final amount will also consider the total claims filed, administrative costs, taxes, attorneys’ fees, and other expenses approved by the court. We at Luxe Settlement Solutions will advocate on your behalf and contest the Class Administrator's estimated interchange fees if we believe they are inaccurate.</p>
 
-      <h3>When will I receive the payment?</h3>
-      <p>Payments will be made after the final date to register claims on February 4, 2025, but the exact timing is unknown until all claims are reviewed and the Court approves the final amounts. We will continue to keep you informed on the process and status of your claim throughout that period.</p>
+        <h3>When will I receive the payment?</h3>
+        <p>Payments will be made after the final date to register claims on February 4, 2025, but the exact timing is unknown until all claims are reviewed and the Court approves the final amounts. We will continue to keep you informed on the process and status of your claim throughout that period.</p>
 
-      <h3>If my business is no longer operating, but accepted VISA/Mastercard during the Class Period, can it qualify?</h3>
-      <p>Yes, businesses that no longer operate can qualify. We can verify on your behalf.</p>
+        <h3>If my business is no longer operating, but accepted VISA/Mastercard during the Class Period, can it qualify?</h3>
+        <p>Yes, businesses that no longer operate can qualify. We can verify on your behalf.</p>
 
-      <h3>What if I have multiple businesses?</h3>
-      <p>No problem, we can handle all your claims. We have various options to register and handle claims for multiple businesses. Please reach out to us directly or at support@luxesettlementsolutions.com</p>
+        <h3>What if I have multiple businesses?</h3>
+        <p>No problem, we can handle all your claims. We have various options to register and handle claims for multiple businesses. Please reach out to us directly or at support@luxesettlementsolutions.com</p>
 
-      <h3>Why might my business not qualify?</h3>
-      <p>There are some unique cases where a merchant who accepted VISA and Mastercard during the class term period might not qualify. Mostly, there are some businesses, such as large corporations like Walmart, who independently settled outside of this class action. Other merchants may have opted out.</p>
-    </div>
-  </section>
+        <h3>Why might my business not qualify?</h3>
+        <p>There are some unique cases where a merchant who accepted VISA and Mastercard during the class term period might not qualify. Mostly, there are some businesses, such as large corporations like Walmart, who independently settled outside of this class action. Other merchants may have opted out.</p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.menu').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
