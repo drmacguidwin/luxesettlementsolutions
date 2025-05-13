@@ -26,8 +26,34 @@
       width: 100%;
       z-index: 999;
     }
+    .logo {
+      margin: 0 auto;
+    }
     .logo img {
       height: 50px;
+      display: block;
+      margin: 0 auto;
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .menu a {
+      text-decoration: none;
+      color: #1b1b1b;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+      }
+      header {
+        justify-content: center;
+      }
     }
     .hero { background: url('A_high-resolution_digital_photograph_captures_a_pa.png') no-repeat center center; background-size: cover; color: white; text-align: center; height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 1rem; margin-top: 5rem; }
     .hero h1 { font-size: 3rem; margin: 0; }
@@ -56,18 +82,6 @@
     footer { background-color: #1b2d6e; color: white; text-align: center; padding: 3rem 1rem 1rem; margin-top: 2rem; }
     footer a { color: #ffffff; }
     .footer-disclaimer { margin-top: 2rem; font-size: 0.85rem; color: #ddd; max-width: 900px; margin-left: auto; margin-right: auto; }
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .menu a {
-      text-decoration: none;
-      color: #1b1b1b;
-      font-weight: 600;
-      font-size: 1rem;
-    }
     .cta.learn-more {
       background-color: #1b1b1b;
       color: white;
