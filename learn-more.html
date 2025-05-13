@@ -29,33 +29,18 @@
     .logo img {
       height: 50px;
     }
-    .hero { background: url('A_high-resolution_digital_photograph_captures_a_pa.png') no-repeat center center; background-size: cover; color: white; text-align: center; height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 1rem; margin-top: 5rem; }
-    .hero h1 { font-size: 3rem; margin: 0; }
-    .hero p { font-size: 1.25rem; margin-bottom: 2rem; }
-    .hero .cta { background-color: #344b9b; color: white; border: none; padding: 1rem 2rem; font-size: 1rem; cursor: pointer; border-radius: 4px; }
     section { max-width: 1000px; margin: 0 auto; padding: 3rem 1rem; }
     section h2, section > p:first-of-type { text-align: center; }
     .news-icons {
       display: flex;
       justify-content: center;
-      gap: 3rem;
-      margin-top: 2rem;
+      gap: 4rem;
+      margin-top: 1rem;
       margin-bottom: 3rem;
     }
     .news-icons a img {
-      height: 50px;
+      height: 60px;
     }
-    .stats { display: flex; justify-content: space-around; text-align: center; margin-top: 2rem; }
-    .stats div { max-width: 200px; }
-    .stats i { font-size: 2rem; color: #344b9b; margin-bottom: 0.5rem; }
-    .who-we-are { background-color: #344b9b; color: white; padding: 3rem 1rem; text-align: center; }
-    .process { text-align: center; }
-    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem; }
-    .step { padding-bottom: 1rem; border-bottom: 2px solid #1b1b1b; }
-    .get-started { background-color: #f0f0f0; text-align: center; padding: 3rem 1rem; }
-    footer { background-color: #1b2d6e; color: white; text-align: center; padding: 3rem 1rem 1rem; margin-top: 2rem; }
-    footer a { color: #ffffff; }
-    .footer-disclaimer { margin-top: 2rem; font-size: 0.85rem; color: #ddd; max-width: 900px; margin-left: auto; margin-right: auto; }
     .menu {
       display: flex;
       align-items: center;
@@ -68,15 +53,28 @@
       font-weight: 600;
       font-size: 1rem;
     }
-    .cta.learn-more {
-      background-color: #1b1b1b;
-      color: white;
-      padding: 1rem 2rem;
+    .faq-section {
+      background-color: #f0f0f0;
+      padding: 3rem 1rem;
+    }
+    .faq-section h2 {
+      text-align: center;
+    }
+    .faq {
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+    .faq h3 {
+      font-size: 1.25rem;
+      color: #1b1b1b;
+    }
+    .faq p {
       font-size: 1rem;
-      border: none;
-      border-radius: 0;
-      cursor: pointer;
-      margin-top: 3rem;
+      line-height: 1.5;
+    }
+    .faq a {
+      color: #344b9b;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -94,11 +92,13 @@
       <a href="index.html#contact">Contact</a>
     </nav>
   </header>
-  <section style="margin-top: 8rem; text-align: center;">
+
+  <section style="margin-top: 8rem; text-align: center; background: linear-gradient(to bottom, #ffffff 0%, #e1e6f5 100%);">
     <h2>What is the Settlement?</h2>
     <div style="background-color: #4a5991; color: white; padding: 2rem; margin: 2rem auto; max-width: 800px; border-radius: 20px; box-shadow: 5px 5px 5px #999;">
       <p>In 2005, U.S. Merchants brought a class-action lawsuit against VISA, Mastercard and their bank affiliates for allegedly inflating the interchange fees they charged Merchants for credit card processing. The lawsuit was settled in 2018, but the settlement amount and processes for its distribution were not determined until late 2023. Any Merchant or Business who accepted VISA and/or Mastercard from January 1, 2004 to January 25, 2019 is likely eligible to receive a portion of the settlement amount.</p>
     </div>
+    <p style="margin-top: 3rem; font-weight: 600;">In The News:</p>
     <div class="news-icons">
       <a href="https://www.reuters.com/legal/visa-mastercard-56-bln-settlement-with-retailers-is-upheld-2023-03-15/" target="_blank">
         <img src="reuters.png" alt="Reuters Logo">
@@ -109,6 +109,35 @@
       <a href="https://www.latimes.com/business/la-fi-visa-mastercard-20180918-story.html" target="_blank">
         <img src="latimes.png" alt="LA Times Logo">
       </a>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <h2>FAQs</h2>
+    <div class="faq">
+      <h3>What was the class action lawsuit about?</h3>
+      <p>This class action lawsuit addresses the interchange fees charged to merchants who accepted Visa or Mastercard credit or debit cards between January 1, 2004, and January 25, 2019, and the rules enforced by Visa and Mastercard. The plaintiffs allege that Visa, Mastercard, and their member banks unlawfully set these fees and imposed rules that prevented merchants from steering customers to other payment methods, keeping the fees high.</p>
+
+      <h3>What is an interchange fee?</h3>
+      <p>When a cardholder uses a credit or debit card for a purchase, an interchange fee of about 1% to 2% is incurred. These fees constitute the largest portion of the costs merchants pay for accepting Visa and Mastercard, which update their rates biannually and publish them online.</p>
+
+      <h3>How do I submit a claim?</h3>
+      <p>Select "Get Started" above and submit the intake form so we can register your claim. You can also file the claim yourself through the Payment Card Settlement <a href="https://www.paymentcardsettlement.com/en" target="_blank">website</a>.</p>
+
+      <h3>How much will my business receive from the Settlement?</h3>
+      <p>The amount you receive from the settlement will depend on your actual or estimated Visa and Mastercard interchange fees from January 1, 2004, through January 25, 2019. The final amount will also consider the total claims filed, administrative costs, taxes, attorneys’ fees, and other expenses approved by the court. We at Luxe Settlement Solutions will advocate on your behalf and contest the Class Administrator's estimated interchange fees if we believe they are inaccurate.</p>
+
+      <h3>When will I receive the payment?</h3>
+      <p>Payments will be made after the final date to register claims on February 4, 2025, but the exact timing is unknown until all claims are reviewed and the Court approves the final amounts. We will continue to keep you informed on the process and status of your claim throughout that period.</p>
+
+      <h3>If my business is no longer operating, but accepted VISA/Mastercard during the Class Period, can it qualify?</h3>
+      <p>Yes, businesses that no longer operate can qualify. We can verify on your behalf.</p>
+
+      <h3>What if I have multiple businesses?</h3>
+      <p>No problem, we can handle all your claims. We have various options to register and handle claims for multiple businesses. Please reach out to us directly or at support@luxesettlementsolutions.com</p>
+
+      <h3>Why might my business not qualify?</h3>
+      <p>There are some unique cases where a merchant who accepted VISA and Mastercard during the class term period might not qualify. Mostly, there are some businesses, such as large corporations like Walmart, who independently settled outside of this class action. Other merchants may have opted out.</p>
     </div>
   </section>
 </body>
