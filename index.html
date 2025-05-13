@@ -8,8 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-xh6nMrlJ8vRL+u0aNjW5DlfT8zC+SvT6ghNtbZtwEpQiU5D5TOf5E6nUZbVbUuQK/5Gq1+gP5I+4ZTT4O7yX3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    html { scroll-behavior: auto; }
-    html.smooth-scroll { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; }
     body { margin: 0; font-family: 'Open Sans', sans-serif; color: #1b1b1b; background-color: #ffffff; }
     .top-bar { background-color: #d8cf8c; color: #1b1b1b; text-align: center; padding: 0.5rem 1rem; font-size: 0.9rem; position: fixed; top: 0; width: 100%; z-index: 1000; border-bottom: 1px solid #d8cf8c; }
     header {
@@ -17,11 +16,11 @@
       padding: 1rem 2rem;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       flex-wrap: wrap;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       position: fixed;
-      top: 0;
+      top: 2rem;
       width: 100%;
       z-index: 999;
     }
@@ -51,59 +50,29 @@
       position: absolute;
       right: 2rem;
     }
-    .news-icons {
+    .icon-row {
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 3rem;
-      margin-top: 1rem;
-      margin-bottom: 3rem;
-    }
-    .news-icons a img {
-      height: 90px;
-      max-width: 100%;
-    }
-    .faq-section {
-      background-color: #f0f0f0;
-      padding: 3rem 1rem;
-      margin-top: 0;
-    }
-    .faq-section h2 {
+      align-items: center;
       text-align: center;
-    }
-    .faq {
-      max-width: 800px;
-      margin: 2rem auto;
-    }
-    .faq h3 {
-      font-size: 1.25rem;
-      color: #1b1b1b;
-    }
-    .faq p {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-    .faq a {
-      color: #344b9b;
-      text-decoration: underline;
-    }
-    .icon-section {
-      display: flex;
-      justify-content: center;
       gap: 2rem;
-      flex-wrap: wrap;
+      margin-top: 2rem;
     }
     .icon-item {
-      flex: 1 1 300px;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 250px;
     }
-    .learn-more-button {
+    .icon-item img, .icon-item span {
+      height: 60px;
+      margin-bottom: 1rem;
+    }
+    .learn-more-btn {
       display: none;
     }
     @media (max-width: 768px) {
-      header {
-        justify-content: space-between;
-      }
       .menu {
         display: none;
         flex-direction: column;
@@ -121,79 +90,47 @@
       .menu-toggle {
         display: block;
       }
-      .news-icons {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-      }
     }
   </style>
 </head>
-<body id="top">
+<body>
+  <div class="top-bar">The final date to register your business was February 4th, 2025</div>
   <header>
     <div class="logo">
-      <a href="index.html#top"><img src="logo.png" alt="Luxe Settlement Solutions Logo"></a>
+      <a href="index.html"><img src="logo.png" alt="Luxe Settlement Solutions Logo"></a>
     </div>
-    <div class="menu-toggle" onclick="document.querySelector('.menu').classList.toggle('active')">
-      &#9776;
-    </div>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
     <nav class="menu">
-      <a href="index.html#top">Home</a>
-      <a href="index.html#settlement-info">Settlement Info</a>
-      <a href="index.html#about-us">About Us</a>
-      <a href="index.html#services">Services</a>
-      <a href="index.html#get-started">Get Started</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#settlement-info">Settlement Info</a>
+      <a href="#about-us">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#get-started">Get Started</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <div style="background: linear-gradient(to bottom, #ffffff 0%, #e1e6f5 100%); width: 100%; margin-bottom: 0;">
-    <section style="margin-top: 8rem; text-align: center;">
-      <h2>What is the Settlement?</h2>
-      <div style="background-color: #4a5991; color: white; padding: 2rem; margin: 2rem auto; max-width: 800px; border-radius: 20px; box-shadow: 5px 5px 5px #999;">
-        <p>In 2005, U.S. Merchants brought a class-action lawsuit against VISA, Mastercard and their bank affiliates for allegedly inflating the interchange fees they charged Merchants for credit card processing. The lawsuit was settled in 2018, but the settlement amount and processes for its distribution were not determined until late 2023. Any Merchant or Business who accepted VISA and/or Mastercard from January 1, 2004 to January 25, 2019 is likely eligible to receive a portion of the settlement amount.</p>
+  <section class="icon-row">
+    <div class="icon-item">
+      <span style="font-size: 48px; color: #2f4494; font-weight: bold;">$</span>
+      <div>
+        <div style="font-weight: bold; font-size: 1.25rem;">$5.5B</div>
+        <div>Settlement Amount</div>
       </div>
-      <p style="margin-top: 3rem; font-weight: 600;">In The News:</p>
-      <div class="news-icons">
-        <a href="https://www.reuters.com/legal/visa-mastercard-56-bln-settlement-with-retailers-is-upheld-2023-03-15/" target="_blank">
-          <img src="reuters.png" alt="Reuters Logo">
-        </a>
-        <a href="https://apnews.com/article/small-business-credit-card-settlement-95e404b2572e75cea50b59e66b2ed971" target="_blank">
-          <img src="ap.png" alt="AP Logo">
-        </a>
-        <a href="https://www.latimes.com/business/la-fi-visa-mastercard-20180918-story.html" target="_blank">
-          <img src="latimes.png" alt="LA Times Logo">
-        </a>
+    </div>
+    <div class="icon-item">
+      <img src="calendar.svg" alt="Class Period Icon">
+      <div>
+        <div style="font-weight: bold; font-size: 1.25rem;">Jan 1, 2004 - Jan 25, 2019</div>
+        <div>Class Period</div>
       </div>
-    </section>
-  </div>
-
-  <section class="faq-section">
-    <h2>FAQs</h2>
-    <div class="faq">
-      <h3>What was the class action lawsuit about?</h3>
-      <p>This class action lawsuit addresses the interchange fees charged to merchants who accepted Visa or Mastercard credit or debit cards between January 1, 2004, and January 25, 2019, and the rules enforced by Visa and Mastercard. The plaintiffs allege that Visa, Mastercard, and their member banks unlawfully set these fees and imposed rules that prevented merchants from steering customers to other payment methods, keeping the fees high.</p>
-
-      <h3>What is an interchange fee?</h3>
-      <p>When a cardholder uses a credit or debit card for a purchase, an interchange fee of about 1% to 2% is incurred. These fees constitute the largest portion of the costs merchants pay for accepting Visa and Mastercard, which update their rates biannually and publish them online.</p>
-
-      <h3>How do I submit a claim?</h3>
-      <p>Select "Get Started" above and submit the intake form so we can register your claim. You can also file the claim yourself through the Payment Card Settlement <a href="https://www.paymentcardsettlement.com/en" target="_blank">website</a>.</p>
-
-      <h3>How much will my business receive from the Settlement?</h3>
-      <p>The amount you receive from the settlement will depend on your actual or estimated Visa and Mastercard interchange fees from January 1, 2004, through January 25, 2019. The final amount will also consider the total claims filed, administrative costs, taxes, attorneys’ fees, and other expenses approved by the court. We at Luxe Settlement Solutions will advocate on your behalf and contest the Class Administrator's estimated interchange fees if we believe they are inaccurate.</p>
-
-      <h3>When will I receive the payment?</h3>
-      <p>Payments will be made after the final date to register claims on February 4, 2025, but the exact timing is unknown until all claims are reviewed and the Court approves the final amounts. We will continue to keep you informed on the process and status of your claim throughout that period.</p>
-
-      <h3>If my business is no longer operating, but accepted VISA/Mastercard during the Class Period, can it qualify?</h3>
-      <p>Yes, businesses that no longer operate can qualify. We can verify on your behalf.</p>
-
-      <h3>What if I have multiple businesses?</h3>
-      <p>No problem, we can handle all your claims. We have various options to register and handle claims for multiple businesses. Please reach out to us directly or at support@luxesettlementsolutions.com</p>
-
-      <h3>Why might my business not qualify?</h3>
-      <p>There are some unique cases where a merchant who accepted VISA and Mastercard during the class term period might not qualify. Mostly, there are some businesses, such as large corporations like Walmart, who independently settled outside of this class action. Other merchants may have opted out.</p>
+    </div>
+    <div class="icon-item">
+      <img src="pen.svg" alt="Final Date to Register Icon">
+      <div>
+        <div style="font-weight: bold; font-size: 1.25rem;">February 4, 2025</div>
+        <div>Final Date to Register</div>
+      </div>
     </div>
   </section>
 
