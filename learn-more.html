@@ -47,12 +47,14 @@
     .news-icons {
       display: flex;
       justify-content: center;
-      gap: 5rem;
+      flex-wrap: wrap;
+      gap: 3rem;
       margin-top: 1rem;
       margin-bottom: 3rem;
     }
     .news-icons a img {
-      height: 80px;
+      height: 90px;
+      max-width: 100%;
     }
     .faq-section {
       background-color: #f0f0f0;
@@ -94,6 +96,11 @@
       }
       .menu-toggle {
         display: block;
+      }
+      .news-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
       }
     }
   </style>
@@ -137,36 +144,34 @@
     </section>
   </div>
 
-  <div style="background-color: #f0f0f0; width: 100%;">
-    <section class="faq-section">
-      <h2>FAQs</h2>
-      <div class="faq">
-        <h3>What was the class action lawsuit about?</h3>
-        <p>This class action lawsuit addresses the interchange fees charged to merchants who accepted Visa or Mastercard credit or debit cards between January 1, 2004, and January 25, 2019, and the rules enforced by Visa and Mastercard. The plaintiffs allege that Visa, Mastercard, and their member banks unlawfully set these fees and imposed rules that prevented merchants from steering customers to other payment methods, keeping the fees high.</p>
+  <section class="faq-section">
+    <h2>FAQs</h2>
+    <div class="faq">
+      <h3>What was the class action lawsuit about?</h3>
+      <p>This class action lawsuit addresses the interchange fees charged to merchants who accepted Visa or Mastercard credit or debit cards between January 1, 2004, and January 25, 2019, and the rules enforced by Visa and Mastercard. The plaintiffs allege that Visa, Mastercard, and their member banks unlawfully set these fees and imposed rules that prevented merchants from steering customers to other payment methods, keeping the fees high.</p>
 
-        <h3>What is an interchange fee?</h3>
-        <p>When a cardholder uses a credit or debit card for a purchase, an interchange fee of about 1% to 2% is incurred. These fees constitute the largest portion of the costs merchants pay for accepting Visa and Mastercard, which update their rates biannually and publish them online.</p>
+      <h3>What is an interchange fee?</h3>
+      <p>When a cardholder uses a credit or debit card for a purchase, an interchange fee of about 1% to 2% is incurred. These fees constitute the largest portion of the costs merchants pay for accepting Visa and Mastercard, which update their rates biannually and publish them online.</p>
 
-        <h3>How do I submit a claim?</h3>
-        <p>Select "Get Started" above and submit the intake form so we can register your claim. You can also file the claim yourself through the Payment Card Settlement <a href="https://www.paymentcardsettlement.com/en" target="_blank">website</a>.</p>
+      <h3>How do I submit a claim?</h3>
+      <p>Select "Get Started" above and submit the intake form so we can register your claim. You can also file the claim yourself through the Payment Card Settlement <a href="https://www.paymentcardsettlement.com/en" target="_blank">website</a>.</p>
 
-        <h3>How much will my business receive from the Settlement?</h3>
-        <p>The amount you receive from the settlement will depend on your actual or estimated Visa and Mastercard interchange fees from January 1, 2004, through January 25, 2019. The final amount will also consider the total claims filed, administrative costs, taxes, attorneys’ fees, and other expenses approved by the court. We at Luxe Settlement Solutions will advocate on your behalf and contest the Class Administrator's estimated interchange fees if we believe they are inaccurate.</p>
+      <h3>How much will my business receive from the Settlement?</h3>
+      <p>The amount you receive from the settlement will depend on your actual or estimated Visa and Mastercard interchange fees from January 1, 2004, through January 25, 2019. The final amount will also consider the total claims filed, administrative costs, taxes, attorneys’ fees, and other expenses approved by the court. We at Luxe Settlement Solutions will advocate on your behalf and contest the Class Administrator's estimated interchange fees if we believe they are inaccurate.</p>
 
-        <h3>When will I receive the payment?</h3>
-        <p>Payments will be made after the final date to register claims on February 4, 2025, but the exact timing is unknown until all claims are reviewed and the Court approves the final amounts. We will continue to keep you informed on the process and status of your claim throughout that period.</p>
+      <h3>When will I receive the payment?</h3>
+      <p>Payments will be made after the final date to register claims on February 4, 2025, but the exact timing is unknown until all claims are reviewed and the Court approves the final amounts. We will continue to keep you informed on the process and status of your claim throughout that period.</p>
 
-        <h3>If my business is no longer operating, but accepted VISA/Mastercard during the Class Period, can it qualify?</h3>
-        <p>Yes, businesses that no longer operate can qualify. We can verify on your behalf.</p>
+      <h3>If my business is no longer operating, but accepted VISA/Mastercard during the Class Period, can it qualify?</h3>
+      <p>Yes, businesses that no longer operate can qualify. We can verify on your behalf.</p>
 
-        <h3>What if I have multiple businesses?</h3>
-        <p>No problem, we can handle all your claims. We have various options to register and handle claims for multiple businesses. Please reach out to us directly or at support@luxesettlementsolutions.com</p>
+      <h3>What if I have multiple businesses?</h3>
+      <p>No problem, we can handle all your claims. We have various options to register and handle claims for multiple businesses. Please reach out to us directly or at support@luxesettlementsolutions.com</p>
 
-        <h3>Why might my business not qualify?</h3>
-        <p>There are some unique cases where a merchant who accepted VISA and Mastercard during the class term period might not qualify. Mostly, there are some businesses, such as large corporations like Walmart, who independently settled outside of this class action. Other merchants may have opted out.</p>
-      </div>
-    </section>
-  </div>
+      <h3>Why might my business not qualify?</h3>
+      <p>There are some unique cases where a merchant who accepted VISA and Mastercard during the class term period might not qualify. Mostly, there are some businesses, such as large corporations like Walmart, who independently settled outside of this class action. Other merchants may have opted out.</p>
+    </div>
+  </section>
 
   <script>
     document.querySelector('.menu-toggle').addEventListener('click', () => {
